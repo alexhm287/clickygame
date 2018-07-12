@@ -58,9 +58,10 @@ class App extends Component {
   // Map over this.state.friends and render a FriendCard component for each friend object
   render() {
     return (
-      <Wrapper>
-        <Title score={this.state.score} topScore={this.state.topScore} guess={this.state.guess} >Clicky Game</Title> 
 
+      <div style={{textAlign:'center', backgroundColor:'rebeccapurple'}}>
+       <Title score={this.state.score} topScore={this.state.topScore} guess={this.state.guess} >Clicky Game</Title> 
+      <Wrapper>
         {this.state.friends.map(friend => (
           <FriendCard
             shuffleCards={this.shuffleCards}
@@ -73,6 +74,7 @@ class App extends Component {
           />
         ))}
       </Wrapper>
+      </div>
     );
   }
 }
